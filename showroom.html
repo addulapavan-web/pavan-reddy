@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Reddy Sports Bikes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#111;
+color:white;
+}
+
+nav{
+background:black;
+padding:15px;
+text-align:center;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+nav a{
+color:white;
+margin:20px;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+nav a:hover{
+color:red;
+}
+
+section{
+padding:80px 20px;
+text-align:center;
+}
+
+h1,h2{
+color:red;
+margin-bottom:20px;
+}
+
+.hero{
+height:100vh;
+background:url('https://images.unsplash.com/photo-1558981806-ec527fa84c39') no-repeat center/cover;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hero h1{
+background:rgba(0,0,0,0.6);
+padding:20px;
+font-size:40px;
+}
+
+.btn{
+padding:12px 25px;
+background:red;
+color:white;
+border:none;
+cursor:pointer;
+transition:0.3s;
+}
+
+.btn:hover{
+background:white;
+color:red;
+transform:scale(1.1);
+}
+
+.info{
+max-width:800px;
+margin:auto;
+line-height:1.8;
+}
+
+.bike-container{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
+}
+
+.card{
+background:#222;
+padding:20px;
+width:250px;
+border-radius:10px;
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.05);
+}
+
+.card img{
+width:100%;
+border-radius:10px;
+margin-bottom:10px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+border-radius:10px;
+transition:0.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.1);
+}
+
+.offer{
+background:#222;
+padding:30px;
+margin:20px auto;
+width:300px;
+border-radius:10px;
+transition:0.3s;
+}
+
+.offer:hover{
+transform:scale(1.05);
+}
+
+.review{
+background:#222;
+padding:25px;
+margin:20px auto;
+width:400px;
+border-radius:10px;
+transition:0.3s;
+}
+
+.review:hover{
+transform:scale(1.05);
+}
+
+.contact-img{
+width:300px;
+border-radius:10px;
+margin-top:20px;
+}
+</style>
+
+<script>
+function orderSuccess(){
+alert("Order placed successfully");
+}
+</script>
+
+</head>
+
+<body>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#bikes">Bikes</a>
+<a href="#gallery">Gallery</a>
+<a href="#offers">Offers</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<section class="hero" id="home">
+<h1>Welcome to Reddy Sports Bikes</h1>
+<br>
+<a href="#bikes"><button class="btn">Explore Bikes</button></a>
+</section>
+
+<section>
+<h2>About Our Showroom</h2>
+<div class="info">
+<p>Reddy Sports Bikes is one of the best sports bike showrooms offering premium performance bikes from top brands. Our showroom features world-class motorcycles known for speed, design, and technology.</p>
+<br>
+<p>We provide the latest bikes from Yamaha, Ducati, Kawasaki, BMW, Honda, and many more. Customers can explore, compare, and purchase their dream bike with amazing offers and quick delivery.</p>
+</div>
+</section>
+
+<section id="bikes">
+<h2>Top Sports Bikes</h2>
+
+<div class="bike-container">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1611241443707-8d3d9d8d8b6c">
+<h3>Yamaha R15</h3>
+<p>₹1,80,000</p>
+<button class="btn" onclick="orderSuccess()">Buy Now</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1609630875171-b1321377ee65">
+<h3>Kawasaki Ninja</h3>
+<p>₹3,50,000</p>
+<button class="btn" onclick="orderSuccess()">Buy Now</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1558980664-10ea9b4a1f0a">
+<h3>BMW S1000RR</h3>
+<p>₹20,00,000</p>
+<button class="btn" onclick="orderSuccess()">Buy Now</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a">
+<h3>Ducati Panigale</h3>
+<p>₹25,00,000</p>
+<button class="btn" onclick="orderSuccess()">Buy Now</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1518655048521-f130df041f66">
+<h3>KTM RC 390</h3>
+<p>₹3,20,000</p>
+<button class="btn" onclick="orderSuccess()">Buy Now</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70">
+<h3>Suzuki Hayabusa</h3>
+<p>₹16,90,000</p>
+<button class="btn" onclick="orderSuccess()">Buy Now</button>
+</div>
+
+</div>
+</section>
+
+<section id="gallery">
+<h2>Bike Gallery</h2>
+
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1558980664-10ea9b4a1f0a">
+<img src="https://images.unsplash.com/photo-1518655048521-f130df041f66">
+<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70">
+<img src="https://images.unsplash.com/photo-1611241443707-8d3d9d8d8b6c">
+<img src="https://images.unsplash.com/photo-1609630875171-b1321377ee65">
+<img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a">
+</div>
+
+</section>
+
+<section id="offers">
+<h2>Special Offers</h2>
+
+<div class="offer">🔥 Flat 10% Discount</div>
+<div class="offer">🎁 Free Helmet</div>
+<div class="offer">💳 Easy EMI Options</div>
+<div class="offer">🚚 Free Delivery</div>
+
+</section>
+
+<section id="reviews">
+<h2>Customer Reviews</h2>
+
+<div class="review">"Best sports bikes showroom with amazing collection!" - Rahul</div>
+<div class="review">"Very good service and fast delivery." - Arjun</div>
+<div class="review">"I bought my dream bike here. Highly recommended." - Kiran</div>
+
+</section>
+
+<section id="contact">
+<h2>Contact Us</h2>
+
+<p>📞 9876543210</p>
+<p>📧 reddybikes@email.com</p>
+<p>📍 Hyderabad, India</p>
+
+<img class="contact-img" src="https://images.unsplash.com/photo-1558980664-10ea9b4a1f0a">
+
+</section>
+
+</body>
+</html>
